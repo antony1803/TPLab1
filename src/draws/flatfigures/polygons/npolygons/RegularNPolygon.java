@@ -1,17 +1,16 @@
 package draws.flatfigures.polygons.npolygons;
 
+import draws.flatfigures.polygons.Polygon;
+
 import java.awt.*;
 
 public class RegularNPolygon extends Polygon{
 
-    public RegularNPolygon() {
-        super();
-    }
+    protected int N;
 
-    private int N;
-
+    @Override
     public void draw(Graphics2D g2d) {
-        // TODO implement here
+        super.draw(g2d);
     }
 
     public void move() {

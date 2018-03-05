@@ -6,9 +6,7 @@ import java.awt.*;
 
 public class Parallelogram extends Polygon {
 
-    {
-        setNumberOfClicks(3);
-    }
+    public Parallelogram(){}
 
     public Parallelogram(Point p1, Point p2, Point p3) {
         arrayOfPoints.add(p1);
@@ -25,9 +23,7 @@ public class Parallelogram extends Polygon {
 
     @Override
     public void draw(Graphics2D g2d) {
-        for (int i=0; i<arrayOfPoints.size() - 1; i++){
-            g2d.drawLine(arrayOfPoints.get(i).x, arrayOfPoints.get(i).y, arrayOfPoints.get(i+1).x, arrayOfPoints.get(i+1).y);
-        }
+        super.draw(g2d);
     }
 
     public void move() {

@@ -11,7 +11,7 @@ public class RectangularTriangle extends Polygon {
 
     @Override
     public void draw(Graphics2D g2d) {
-        // TODO implement here
+        super.draw(g2d);
     }
 
     public void move() {

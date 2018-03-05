@@ -14,7 +14,9 @@ public class Polygon extends FlatFigure {
 
     @Override
     public void draw(Graphics2D g2d) {
-        // TODO implement here
+        for (int i=0; i<arrayOfPoints.size() - 1; i++){
+            g2d.drawLine(arrayOfPoints.get(i).x, arrayOfPoints.get(i).y, arrayOfPoints.get(i+1).x, arrayOfPoints.get(i+1).y);
+        }
     }
 
     public void move() {

@@ -33,7 +33,7 @@ public class Window extends JFrame{
     }
 
     public void setWindow(){
-        setSize(800, 600);
+        setSize(1000, 800);
         setResizable(false);
         setLocationRelativeTo(null);
     }
@@ -46,19 +46,19 @@ public class Window extends JFrame{
         gbc.anchor = GridBagConstraints.CENTER;
         gbc.insets = new Insets(20, 20, 5, 5);
         gbc.gridx = 0;
-        gbc.weightx = 0.15;
-        gbc.weighty = 0.80;
+        gbc.weightx = 0.05;
+        gbc.weighty = 0.60;
         gbc.gridy = 0;
         gbl.setConstraints(tools, gbc);
         add(tools);
         gbc.insets = new Insets(20, 5, 5, 20);
-        gbc.weightx = 0.85;
+        gbc.weightx = 0.95;
         gbc.gridx = 1;
         gbl.setConstraints(paintLabel, gbc);
         add(paintLabel);
         gbc.insets = new Insets(5, 20, 20, 20);
         gbc.gridwidth = 2;
-        gbc.weighty = 0.20;
+        gbc.weighty = 0.40;
         gbc.gridx = 0;
         gbc.gridy = 1;
         add(options, gbc);

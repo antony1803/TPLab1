@@ -7,8 +7,6 @@ public abstract class Figure extends drawer.Paint{
     public Figure() {
     }
 
-    private int numberOfClicks = 2;
-
     private Point theCenter;
 
     private Color penColor;
@@ -47,13 +45,5 @@ public abstract class Figure extends drawer.Paint{
 
     public void setPenWidth(int penWidth) {
         this.penWidth = penWidth;
-    }
-
-    public int getNumberOfClicks() {
-        return numberOfClicks;
-    }
-
-    public void setNumberOfClicks(int numberOfClicks) {
-        this.numberOfClicks = numberOfClicks;
     }
 }
