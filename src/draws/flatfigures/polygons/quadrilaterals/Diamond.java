@@ -36,17 +36,17 @@ public class Diamond extends Parallelogram {
         arrayOfPoints.add(p2);
         arrayOfPoints.add(p4);
         arrayOfPoints.add(p1);
-        }
-
-        private Point leftDownCorner;
-
-        @Override
-        public void draw(Graphics2D g2d) {
-            super.draw(g2d);
-        }
-
-        public void move() {
-            // TODO implement here
-        }
-
     }
+
+    private Point leftDownCorner;
+
+    @Override
+    public void draw(Graphics2D g2d) {
+        super.draw(g2d);
+    }
+
+    public void move() {
+        // TODO implement here
+    }
+
+}
