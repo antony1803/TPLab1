@@ -8,6 +8,10 @@ public class RegularNPolygon extends Polygon{
 
     protected int N;
 
+    public RegularNPolygon(Point... p){
+        super(p);
+    }
+
     @Override
     public void draw(Graphics2D g2d) {
         super.draw(g2d);

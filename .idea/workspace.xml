@@ -3,26 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="307c15d5-1590-49de-890f-21258dbc694c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab1/drawer/BtwWtfYouAreDoing.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/drawer/Main.java" afterPath="$PROJECT_DIR$/src/drawer/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/drawer/Options.java" afterPath="$PROJECT_DIR$/src/drawer/Options.java" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab1/drawer/Paint$1.class" afterPath="$PROJECT_DIR$/out/production/Lab1/drawer/Paint$1.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab1/drawer/Paint.class" afterPath="$PROJECT_DIR$/out/production/Lab1/drawer/Paint.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab1/draws/flatfigures/polygons/Polygon.class" afterPath="$PROJECT_DIR$/out/production/Lab1/draws/flatfigures/polygons/Polygon.class" />
       <change beforePath="$PROJECT_DIR$/src/drawer/Paint.java" afterPath="$PROJECT_DIR$/src/drawer/Paint.java" />
-      <change beforePath="$PROJECT_DIR$/src/drawer/Tools.java" afterPath="$PROJECT_DIR$/src/drawer/Tools.java" />
-      <change beforePath="$PROJECT_DIR$/src/draws/flatfigures/FlatFigure.java" afterPath="$PROJECT_DIR$/src/draws/flatfigures/FlatFigure.java" />
-      <change beforePath="$PROJECT_DIR$/src/draws/flatfigures/circles/Circle.java" afterPath="$PROJECT_DIR$/src/draws/flatfigures/circles/Circle.java" />
-      <change beforePath="$PROJECT_DIR$/src/draws/flatfigures/circles/Ellipse.java" afterPath="$PROJECT_DIR$/src/draws/flatfigures/circles/Ellipse.java" />
       <change beforePath="$PROJECT_DIR$/src/draws/flatfigures/polygons/Polygon.java" afterPath="$PROJECT_DIR$/src/draws/flatfigures/polygons/Polygon.java" />
       <change beforePath="$PROJECT_DIR$/src/draws/flatfigures/polygons/npolygons/RegularNPolygon.java" afterPath="$PROJECT_DIR$/src/draws/flatfigures/polygons/npolygons/RegularNPolygon.java" />
-      <change beforePath="$PROJECT_DIR$/src/draws/flatfigures/polygons/npolygons/Star.java" afterPath="$PROJECT_DIR$/src/draws/flatfigures/polygons/npolygons/Star.java" />
-      <change beforePath="$PROJECT_DIR$/src/draws/flatfigures/polygons/quadrilaterals/Diamond.java" afterPath="$PROJECT_DIR$/src/draws/flatfigures/polygons/quadrilaterals/Diamond.java" />
       <change beforePath="$PROJECT_DIR$/src/draws/flatfigures/polygons/quadrilaterals/Parallelogram.java" afterPath="$PROJECT_DIR$/src/draws/flatfigures/polygons/quadrilaterals/Parallelogram.java" />
-      <change beforePath="$PROJECT_DIR$/src/draws/flatfigures/polygons/quadrilaterals/Rectangle.java" afterPath="$PROJECT_DIR$/src/draws/flatfigures/polygons/quadrilaterals/Rectangle.java" />
-      <change beforePath="$PROJECT_DIR$/src/draws/flatfigures/polygons/triangles/IsoscelesRectangularTriangle.java" afterPath="$PROJECT_DIR$/src/draws/flatfigures/polygons/triangles/IsoscelesRectangularTriangle.java" />
-      <change beforePath="$PROJECT_DIR$/src/draws/flatfigures/polygons/triangles/IsoscelesTriangle.java" afterPath="$PROJECT_DIR$/src/draws/flatfigures/polygons/triangles/IsoscelesTriangle.java" />
-      <change beforePath="$PROJECT_DIR$/src/draws/flatfigures/polygons/triangles/RectangularTriangle.java" afterPath="$PROJECT_DIR$/src/draws/flatfigures/polygons/triangles/RectangularTriangle.java" />
-      <change beforePath="$PROJECT_DIR$/src/draws/lines/Line.java" afterPath="$PROJECT_DIR$/src/draws/lines/Line.java" />
-      <change beforePath="$PROJECT_DIR$/src/draws/lines/Ray.java" afterPath="$PROJECT_DIR$/src/draws/lines/Ray.java" />
-      <change beforePath="$PROJECT_DIR$/src/draws/lines/Segment.java" afterPath="$PROJECT_DIR$/src/draws/lines/Segment.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,35 +39,52 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Rectangle.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/draws/flatfigures/polygons/quadrilaterals/Rectangle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Polygon.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Polygon.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/draws/flatfigures/polygons/Polygon.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+            <state relative-caret-position="144">
+              <caret line="11" column="56" lean-forward="false" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
               <folding>
-                <element signature="e#239#240#0" expanded="true" />
-                <element signature="e#275#276#0" expanded="true" />
+                <element signature="e#221#222#0" expanded="true" />
+                <element signature="e#284#285#0" expanded="true" />
+                <element signature="e#335#336#0" expanded="true" />
+                <element signature="e#371#372#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Parallelogram.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RegularNPolygon.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/draws/flatfigures/polygons/npolygons/RegularNPolygon.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+              <folding>
+                <element signature="e#218#219#0" expanded="true" />
+                <element signature="e#242#243#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Parallelogram.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/draws/flatfigures/polygons/quadrilaterals/Parallelogram.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="168">
+              <caret line="9" column="77" lean-forward="false" selection-start-line="9" selection-start-column="77" selection-end-line="9" selection-end-column="77" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Diamond.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/draws/flatfigures/polygons/quadrilaterals/Diamond.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding>
+                <element signature="e#200#201#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -88,11 +92,11 @@
       <file leaf-file-name="Paint.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/drawer/Paint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="129" column="95" lean-forward="false" selection-start-line="129" selection-start-column="95" selection-end-line="129" selection-end-column="95" />
+            <state relative-caret-position="305">
+              <caret line="118" column="55" lean-forward="true" selection-start-line="118" selection-start-column="55" selection-end-line="118" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2623#2753#0" expanded="false" />
+                <element signature="e#2466#2596#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -125,16 +129,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
               <caret line="5" column="38" lean-forward="false" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Options.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/drawer/Options.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -185,7 +179,6 @@
         <option value="$PROJECT_DIR$/src/draws/flatfigures/polygons/quadrilaterals/Rectangle.java" />
         <option value="$PROJECT_DIR$/src/draws/flatfigures/polygons/quadrilaterals/Diamond.java" />
         <option value="$PROJECT_DIR$/src/draws/flatfigures/polygons/npolygons/Star.java" />
-        <option value="$PROJECT_DIR$/src/draws/flatfigures/polygons/npolygons/RegularNPolygon.java" />
         <option value="$PROJECT_DIR$/src/draws/flatfigures/FlatFigure.java" />
         <option value="$PROJECT_DIR$/src/draws/flatfigures/circles/Ellipse.java" />
         <option value="$PROJECT_DIR$/src/draws/flatfigures/circles/Circle.java" />
@@ -196,11 +189,12 @@
         <option value="$PROJECT_DIR$/src/draws/flatfigures/polygons/triangles/IsoscelesTriangle.java" />
         <option value="$PROJECT_DIR$/src/drawer/Tools.java" />
         <option value="$PROJECT_DIR$/src/drawer/ClickerListener.java" />
-        <option value="$PROJECT_DIR$/src/draws/flatfigures/polygons/quadrilaterals/Parallelogram.java" />
         <option value="$PROJECT_DIR$/src/drawer/Options.java" />
-        <option value="$PROJECT_DIR$/src/drawer/Paint.java" />
         <option value="$PROJECT_DIR$/src/draws/flatfigures/polygons/triangles/RectangularTriangle.java" />
+        <option value="$PROJECT_DIR$/src/drawer/Paint.java" />
+        <option value="$PROJECT_DIR$/src/draws/flatfigures/polygons/npolygons/RegularNPolygon.java" />
         <option value="$PROJECT_DIR$/src/draws/flatfigures/polygons/Polygon.java" />
+        <option value="$PROJECT_DIR$/src/draws/flatfigures/polygons/quadrilaterals/Parallelogram.java" />
       </list>
     </option>
   </component>
@@ -210,7 +204,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="1938" />
@@ -532,15 +526,15 @@
       <workItem from="1520348116746" duration="2595000" />
       <workItem from="1520624369619" duration="181000" />
       <workItem from="1520672436700" duration="408000" />
-      <workItem from="1520703553313" duration="5355000" />
+      <workItem from="1520703553313" duration="7408000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52960000" />
+    <option name="totallyTimeSpent" value="55013000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -557,6 +551,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -567,7 +562,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -677,7 +671,7 @@
           <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2623#2753#0" expanded="false" />
+            <element signature="e#2466#2596#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -800,7 +794,7 @@
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2623#2753#0" expanded="false" />
+            <element signature="e#2466#2596#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -844,25 +838,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/draws/flatfigures/polygons/quadrilaterals/Diamond.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/draws/flatfigures/polygons/npolygons/Star.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/draws/flatfigures/polygons/npolygons/RegularNPolygon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
           <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding />
         </state>
@@ -935,29 +913,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/draws/flatfigures/polygons/triangles/IsoscelesRectangularTriangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="e#210#211#0" expanded="true" />
-            <element signature="e#243#244#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/draws/flatfigures/polygons/quadrilaterals/Rectangle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/draws/flatfigures/polygons/quadrilaterals/Parallelogram.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -996,17 +955,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/drawer/Paint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="129" column="95" lean-forward="false" selection-start-line="129" selection-start-column="95" selection-end-line="129" selection-end-column="95" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2623#2753#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/draws/flatfigures/polygons/triangles/RectangularTriangle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
@@ -1018,14 +966,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/draws/flatfigures/polygons/Polygon.java">
+    <entry file="file://$PROJECT_DIR$/src/drawer/Paint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="118" column="55" lean-forward="true" selection-start-line="118" selection-start-column="55" selection-end-line="118" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2466#2596#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/draws/flatfigures/polygons/quadrilaterals/Diamond.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="e#200#201#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/draws/flatfigures/polygons/npolygons/RegularNPolygon.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+          <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
           <folding>
-            <element signature="e#239#240#0" expanded="true" />
-            <element signature="e#275#276#0" expanded="true" />
+            <element signature="e#218#219#0" expanded="true" />
+            <element signature="e#242#243#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/draws/flatfigures/polygons/Polygon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="11" column="56" lean-forward="false" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
+          <folding>
+            <element signature="e#221#222#0" expanded="true" />
+            <element signature="e#284#285#0" expanded="true" />
+            <element signature="e#335#336#0" expanded="true" />
+            <element signature="e#371#372#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/draws/flatfigures/polygons/triangles/IsoscelesRectangularTriangle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="e#210#211#0" expanded="true" />
+            <element signature="e#243#244#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/draws/flatfigures/polygons/quadrilaterals/Parallelogram.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="9" column="77" lean-forward="false" selection-start-line="9" selection-start-column="77" selection-end-line="9" selection-end-column="77" />
+          <folding />
         </state>
       </provider>
     </entry>

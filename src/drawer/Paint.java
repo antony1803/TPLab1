@@ -42,12 +42,7 @@ public class Paint extends JLabel {
                 //points.add(e.getPoint());
                 System.out.println(counter);
                 if (points.size() == counter){
-                    Point p1 = points.get(0);
-                    Point p2 = points.get(1);
-                    Point p3 = new Point();
-                    if (k>3){
-                        p3 = points.get(2);
-                    }
+                    System.out.println("point.size() = " + points.size());
                     switch(k){
                         case 0:
                             new Line(points.get(0), points.get(1));
@@ -92,13 +87,14 @@ public class Paint extends JLabel {
 //                            int b = p1.x+p2.x-2*p3.x;
 //                            int c = p1.y-p2.y;
 //                            p3.y = (a*b)/(2*c);
-                            int a11 = p2.x-p1.x;
-                            int a12 = p2.y-p1.y;
-                            int c1 = (-a11*(p2.x+p1.x) - a12*(p2.y+p1.y))/2;
-                            int c2 = p3.y*a11 - p3.x*a12;
-                            int x = (c2*a12 + c1*a11)/(-a12*a12 - a11*a11);
-                            int y = (c2*a11-c1*a12)/(a12*a12-a11*a11);
-                            Window.getFigures().add(new Diamond(p1, p2, new Point(x, y)));
+                            double a11 = points.get(1).x-points.get(0).x;
+                            double a12 = points.get(1).y-points.get(0).y;
+                            double c1 = (-a11*(points.get(1).x+points.get(0).x) - a12*(points.get(1).y+points.get(0).y))/2;
+                            double c2 = points.get(2).y*a11 - points.get(2).x*a12;
+                            double x = (c2*a12 + c1*a11)/(-a12*a12 - a11*a11);
+                            double y = (c2*a11-c1*a12)/(a12*a12-a11*a11);
+                            System.out.println(x + ":" + y);
+                            Window.getFigures().add(new Diamond(points.get(0), points.get(1), new Point((int)Math.round(x), (int)Math.round(y))));
                             break;
                         case 7:
                             new Ellipse(points.get(0), points.get(1), points.get(2));
@@ -116,19 +112,21 @@ public class Paint extends JLabel {
                             //new IsoscelesTriangle();
                             break;
                         case 12:
-                            if((p3.y-p2.y)*(p2.y-p1.y)+(p2.x-p1.x)*(p3.x-p2.x) == 0){
-                                Point temp=p2;
-                                p2=p3;
-                                p3=temp;
+                            if((points.get(2).y-points.get(1).y)*(points.get(1).y-points.get(0).y)+(points.get(1).x-points.get(0).x)*(points.get(2).x-points.get(1).x) == 0){
+                                Point temp=points.get(1);
+                                points.get(1).x =points.get(2).x;
+                                points.get(1).y =points.get(2).y;
+                                points.get(2).x=temp.x;
+                                points.get(2).y=temp.y;
                             }
-                            double a32 = p3.x - p2.x;
-                            double b21 = p2.y-p1.y;
-                            double b32 = p3.y-p2.y;
-                            double a21 = p2.x-p1.x;
-                            double x3 = (p1.x*a32*a21+p2.x*b32*b21-p2.y*b21*a32+p1.y*b21*a32)/((p3.y-p2.y)*(p2.y-p1.y)+(p2.x-p1.x)*(p3.x-p2.x));
-                            double y3= (x3*b32/a32-p2.x*b32)/a32+p2.y;
+                            double a32 = points.get(2).x - points.get(1).x;
+                            double b21 = points.get(1).y-points.get(0).y;
+                            double b32 = points.get(2).y-points.get(1).y;
+                            double a21 = points.get(1).x-points.get(0).x;
+                            double x3 = (points.get(0).x*a32*a21+points.get(1).x*b32*b21-points.get(1).y*b21*a32+points.get(0).y*b21*a32)/((points.get(2).y-points.get(1).y)*(points.get(1).y-points.get(0).y)+(points.get(1).x-points.get(0).x)*(points.get(2).x-points.get(1).x));
+                            double y3= (x3*b32/a32-points.get(1).x*b32)/a32+points.get(1).y;
                             Point result = new Point((int)Math.round(x3), (int)Math.round(y3));
-                            Window.getFigures().add(new RectangularTriangle(p1, p2, result));
+                            Window.getFigures().add(new RectangularTriangle(points.get(0), points.get(1), result));
                             break;
                         case 13:
                             //new IsoscelesRectangularTriangle();

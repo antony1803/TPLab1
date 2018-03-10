@@ -7,14 +7,7 @@ import java.awt.*;
 public class Parallelogram extends Polygon {
 
     public Parallelogram(Point p1, Point p2, Point p3) {
-        getArrayOfPoints().add(p1);
-        getArrayOfPoints().add(p3);
-        getArrayOfPoints().add(p2);
-        int x = p1.x + p2.x - p3.x;
-        int y = p1.y + p2.y - p3.y;
-        Point p4 = new Point(x, y);
-        getArrayOfPoints().add(p4);
-        getArrayOfPoints().add(p1);
+        super(p1, p3, p2, new Point(p1.x + p2.x - p3.x, p1.y + p2.y - p3.y));
     }
 
     private Point leftDownCorner;

@@ -8,15 +8,22 @@ import java.util.Arrays;
 
 public class Polygon extends FlatFigure {
 
+    public Polygon(Point[] p) {
+        arrayOfPoints = new ArrayList(Arrays.asList(p));
+    }
+
     public  ArrayList<Point> getArrayOfPoints() {
         return arrayOfPoints;
     }
 
     private ArrayList<Point> arrayOfPoints;
 
-    public Polygon(Point... p) {
-        arrayOfPoints = new ArrayList<>(Arrays.asList(p));
-        arrayOfPoints.add(p[0]);
+    public Polygon(Point p1, Point p2, Point... p) {
+
+        arrayOfPoints = new ArrayList(Arrays.asList(p));
+        arrayOfPoints.add(0, p2);
+        arrayOfPoints.add(0, p1);
+        arrayOfPoints.add(p1);
     }
 
     @Override
