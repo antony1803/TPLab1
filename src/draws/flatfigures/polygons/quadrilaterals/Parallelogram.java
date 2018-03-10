@@ -7,10 +7,8 @@ import java.awt.*;
 public class Parallelogram extends Polygon {
 
     public Parallelogram(Point p1, Point p2, Point p3) {
-        super(p1, p3, p2, new Point(p1.x + p2.x - p3.x, p1.y + p2.y - p3.y));
+        super(p1, p2, p3, new Point(p1.x + p3.x - p2.x, p1.y + p3.y - p2.y));
     }
-
-    private Point leftDownCorner;
 
     @Override
     public void draw(Graphics2D g2d) {

@@ -8,8 +8,6 @@ public class Diamond extends Parallelogram {
         super(p1, p2, p3);
     }
 
-    private Point leftDownCorner;
-
     @Override
     public void draw(Graphics2D g2d) {
         super.draw(g2d);

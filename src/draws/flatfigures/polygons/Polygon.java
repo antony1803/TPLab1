@@ -31,9 +31,9 @@ public class Polygon extends FlatFigure {
         for (int i=0; i<arrayOfPoints.size() - 1; i++){
             g2d.setColor(Color.black);
             g2d.drawLine(arrayOfPoints.get(i).x, arrayOfPoints.get(i).y, arrayOfPoints.get(i+1).x, arrayOfPoints.get(i+1).y);
+            g2d.drawOval(arrayOfPoints.get(i).x-3, arrayOfPoints.get(i).y-3,6, 6);
             g2d.setColor(Color.red);
-            g2d.drawRect(arrayOfPoints.get(i).x-1, arrayOfPoints.get(i).y-1,2, 2);
-            System.out.println(arrayOfPoints.get(i) + " - " + arrayOfPoints.get(i+1));
+            g2d.fillOval(arrayOfPoints.get(i).x-3, arrayOfPoints.get(i).y-3,6, 6);
         }
     }
 
