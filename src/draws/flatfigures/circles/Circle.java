@@ -4,8 +4,8 @@ import java.awt.*;
 
 public class Circle extends Ellipse {
 
-    public Circle(Point center, int rad) {
-        super(center, center, rad);
+    public Circle(Point center, Point second) {
+        super(center, center, new Point());
     }
 
     public void draw() {

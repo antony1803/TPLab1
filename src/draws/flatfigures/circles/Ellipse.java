@@ -6,7 +6,7 @@ import java.awt.*;
 
 public class Ellipse extends FlatFigure {
 
-    public Ellipse(Point p1, Point p2, int rad) {
+    public Ellipse(Point p1, Point p2, Point p3) {
 
     }
 

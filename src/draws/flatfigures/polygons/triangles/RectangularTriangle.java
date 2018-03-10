@@ -6,7 +6,7 @@ import java.awt.*;
 
 public class RectangularTriangle extends Polygon {
 
-    public RectangularTriangle() {
+    public RectangularTriangle(Point p1, Point p2, Point p3) {
         if((p3.y-p2.y)*(p2.y-p1.y)+(p2.x-p1.x)*(p3.x-p2.x)!=0){
         }
         else{
@@ -26,10 +26,10 @@ public class RectangularTriangle extends Polygon {
         int x = p1.x + p2.x - p32.x;
         int y = p1.y + p2.y - p32.y;
         Point p4 = new Point(x, y);
-        arrayOfPoints.add(p1);
-        arrayOfPoints.add(p32);
-        arrayOfPoints.add(p2);
-        arrayOfPoints.add(p1);
+        getArrayOfPoints().add(p1);
+        getArrayOfPoints().add(p32);
+        getArrayOfPoints().add(p2);
+        getArrayOfPoints().add(p1);
     }
 
     @Override
