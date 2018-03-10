@@ -13,6 +13,7 @@ public class Star extends RegularNPolygon{
         g2d.drawPolygon(new Polygon());
     }
 
+    @Override
     public void move(){
 
     }

@@ -15,6 +15,7 @@ public class Diamond extends Parallelogram {
         super.draw(g2d);
     }
 
+    @Override
     public void move() {
         // TODO implement here
     }

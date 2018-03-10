@@ -18,6 +18,7 @@ public class Segment extends Figure {
 
     }
 
+    @Override
     public void move() {
         // TODO implement here
     }

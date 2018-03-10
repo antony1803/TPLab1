@@ -13,6 +13,7 @@ public class RegularNPolygon extends Polygon{
         super.draw(g2d);
     }
 
+    @Override
     public void move() {
         // TODO implement here
     }

@@ -6,7 +6,8 @@ import java.awt.*;
 
 public class IsoscelesTriangle extends Polygon {
 
-    public IsoscelesTriangle() {
+    public IsoscelesTriangle(Point p1, Point p2, Point p3) {
+        super(p1, p2, p3);
     }
 
     @Override

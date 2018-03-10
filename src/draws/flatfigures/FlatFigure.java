@@ -4,7 +4,7 @@ import draws.Figure;
 
 import java.awt.*;
 
-public class FlatFigure extends Figure {
+public abstract class FlatFigure extends Figure {
 
     public FlatFigure() {
 
@@ -23,6 +23,7 @@ public class FlatFigure extends Figure {
         // TODO implement here
     }
 
+    @Override
     public void move() {
         // TODO implement here
     }

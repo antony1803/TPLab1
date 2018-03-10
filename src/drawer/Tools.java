@@ -27,8 +27,10 @@ public class Tools extends JPanel {
         buttons.add(new JRadioButton("Rectangular Triangle"));
         buttons.add(new JRadioButton("Isosceless Rectangular Triangle"));
         addComponents();
+        setClicks();
         setBorder(BorderFactory.createLineBorder(Color.BLUE));
     }
+
     public void addComponents(){
         setLayout(new GridLayout(0, 1));
         ButtonGroup bg = new ButtonGroup();
@@ -40,5 +42,12 @@ public class Tools extends JPanel {
         JPanel temp = new JPanel();
         temp.add(clear, BorderLayout.PAGE_END);
         add(temp);
+    }
+
+    public void setClicks(){
+        ClickerListener listener = new ClickerListener();
+        for(int i=0; i<buttons.size(); i++){
+            buttons.get(i).addActionListener(listener);
+        }
     }
 }

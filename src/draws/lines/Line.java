@@ -16,6 +16,7 @@ public class Line extends Ray {
         // TODO implement here
     }
 
+    @Override
     public void move() {
         // TODO implement here
     }

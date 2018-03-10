@@ -4,6 +4,7 @@ import draws.flatfigures.FlatFigure;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Polygon extends FlatFigure {
 
@@ -11,9 +12,11 @@ public class Polygon extends FlatFigure {
         return arrayOfPoints;
     }
 
-    private ArrayList<Point> arrayOfPoints = new ArrayList<>();
+    private ArrayList<Point> arrayOfPoints;
 
-    public Polygon() {
+    public Polygon(Point... p) {
+        arrayOfPoints = new ArrayList<>(Arrays.asList(p));
+        arrayOfPoints.add(p[0]);
     }
 
     @Override

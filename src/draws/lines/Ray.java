@@ -12,6 +12,7 @@ public class Ray extends Segment {
         // TODO implement here
     }
 
+    @Override
     public void move() {
         // TODO implement here
     }

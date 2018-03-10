@@ -13,6 +13,7 @@ public class Rectangle extends Parallelogram {
         super.draw(g2d);
     }
 
+    @Override
     public void move() {
         // TODO implement here
     }

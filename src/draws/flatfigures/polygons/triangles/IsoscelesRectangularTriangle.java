@@ -13,6 +13,7 @@ public class IsoscelesRectangularTriangle extends RectangularTriangle {
         super.draw(g2d);
     }
 
+    @Override
     public void move() {
         // TODO implement here
     }

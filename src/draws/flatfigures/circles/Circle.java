@@ -8,10 +8,12 @@ public class Circle extends Ellipse {
         super(center, center, new Point());
     }
 
-    public void draw() {
+    @Override
+    public void draw(Graphics2D g2d) {
         // TODO implement here
     }
 
+    @Override
     public void move() {
         // TODO implement here
     }
