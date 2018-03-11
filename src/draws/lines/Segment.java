@@ -18,10 +18,9 @@ public class Segment extends Figure {
         g2d.setColor(Color.black);
         g2d.drawLine(getTheCenter().x, getTheCenter().y, finishPoint.x, finishPoint.y);
         g2d.drawOval(getTheCenter().x-3, getTheCenter().y-3, 6, 6);
-        g2d.drawOval(finishPoint.x-3, finishPoint.y-3, 6, 6);
         g2d.setColor(Color.red);
         g2d.fillOval(getTheCenter().x-3, getTheCenter().y-3, 6, 6);
-        g2d.fillOval(finishPoint.x-3, finishPoint.y-3, 6, 6);
+        g2d.setColor(Color.black);
     }
 
     @Override
