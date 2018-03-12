@@ -120,15 +120,15 @@ public class Paint extends JLabel {
                             a21 = p2.x-p1.x;
                             double c21 = p2.y-p1.y;
                             double a43=x4-p3.x;
-                            double y2 = (p3.y*c21*c21-y4*a21*a21+a43*a21*c21)/(a21*c21);
-                            double x2 = y2*c21/a21-p3.y*c21/a21+p3.x;
+                            double y2 = (p3.y*c21*c21+y4*a21*a21-a43*a21*c21)/(a21*c21);
+                            double x2 = -y2*c21/a21+p3.y*c21/a21+p3.x;
                             a12 = p1.x-p2.x;
                             a32 = x2-p2.x;
                             b12 = p1.y-p2.y;
                             b32 = y2-p2.y;
                             x1 = a32*Math.sqrt((a12*a12 + b12*b12)/(a32*a32 + b32*b32)) + (double)p2.x;
                             y1 = b32*Math.sqrt((a12*a12 + b12*b12)/(a32*a32 + b32*b32)) + (double)p2.y;
-                            Window.getFigures().add(new draws.flatfigures.polygons.Polygon(p1, p2,new Point((int)Math.round(x2), (int)Math.round(y2))));
+                            Window.getFigures().add(new draws.flatfigures.polygons.Polygon(p1, p2,new Point((int)Math.round(x1), (int)Math.round(y1))));
                             //new IsoscelesRectangularTriangle(p1, p2, p3);
                             break;
                         default: break;
