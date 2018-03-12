@@ -30,6 +30,11 @@ public class Paint extends JLabel {
 
     public Paint() {
         super();
+        Options.getClear().addActionListener(e-> {
+            Window.getFigures().clear();
+            Paint.points.clear();
+            repaint();
+        });
         setOpaque(true);
         setBackground(Color.white);
         setBorder(BorderFactory.createLineBorder(Color.BLACK));

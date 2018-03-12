@@ -1,15 +1,7 @@
 package drawer;
 
-import draws.*;
-import draws.flatfigures.*;
-import draws.flatfigures.polygons.*;
-import draws.flatfigures.polygons.quadrilaterals.*;
-import draws.flatfigures.polygons.quadrilaterals.Rectangle;
-
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class Options extends JPanel {
     public static JRadioButton dr = new JRadioButton("Draw");
@@ -41,7 +33,12 @@ public class Options extends JPanel {
     }
 
     static private JComboBox<Integer> width;
-    private JButton clear = new JButton("Clear");
+
+    public static JButton getClear() {
+        return clear;
+    }
+
+    private static JButton clear = new JButton("Clear");
     public Options(){
         super();
         ButtonGroup whatToDo = new ButtonGroup();
@@ -97,10 +94,6 @@ public class Options extends JPanel {
         fill.setBackground(Color.white);
         fill.addActionListener(e -> {
             fill.setBackground(JColorChooser.showDialog(null, "choose fill color", Color.white));
-        });
-        clear.addActionListener(e-> {
-            Window.getFigures().clear();
-            repaint();
         });
         width = new JComboBox<>(widths);
     }
