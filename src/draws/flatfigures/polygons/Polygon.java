@@ -14,12 +14,23 @@ public class Polygon extends FlatFigure {
         this();
         arrayOfPoints = new ArrayList(Arrays.asList(p));
     }
+    public Polygon(ArrayList<Point>pp){
+        this();
+        arrayOfPoints = pp;
+        arrayOfPoints.add(arrayOfPoints.get(0));
+    }
 
     public Polygon(){
         setPenColor(Options.getPen().getBackground());
         setFillColor(Options.getFill().getBackground());
         setPenWidth(Options.getPenWidth());
     }
+
+    public  ArrayList<Point> getArrayOfPoints() {
+        return arrayOfPoints;
+    }
+
+    private ArrayList<Point> arrayOfPoints;
 
     public Polygon(Point p1, Point p2, Point... p) {
         this();

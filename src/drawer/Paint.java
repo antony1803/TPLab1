@@ -26,9 +26,8 @@ public class Paint extends JLabel {
 
     static int counter = -1;
     int k = -1;
-    int movingFigure = -1;
     static ArrayList<Point> points = new ArrayList<>();
-    private boolean isMovedRightNow = false;
+
     public Paint() {
         super();
         Options.getClear().addActionListener(e-> {
@@ -51,7 +50,7 @@ public class Paint extends JLabel {
                         Point p2 = points.get(1);
                         Point p3 = new Point();
                         double a12, a21, a23, a32, b12, b21, b23, b32, x1, y1;
-                        if (k > 3) {
+                        if (k > 3 && k != 10) {
                             p3 = points.get(2);
                         }
                         switch (k) {
@@ -103,7 +102,8 @@ public class Paint extends JLabel {
                                 new Polygon();
                                 break;
                             case 10:
-                                new RegularNPolygon();
+                                String temp = JOptionPane.showInputDialog(null, "Введите количество углов:");
+                                Window.getFigures().add(new RegularNPolygon(p1,p2,Math.max(Integer.parseInt(temp), 3)));
                                 break;
                             case 11:
                                 a12 = p1.x - p2.x;
@@ -149,28 +149,21 @@ public class Paint extends JLabel {
                         points.clear();
                         repaint();
                         if (k > 3) {
-                            counter = 3;
+                            if (k == 10){
+                                counter = 2;
+                            }
+                            else{
+                                counter = 3;
+                            }
                         } else {
                             counter = 2;
                         }
                     }
                 } else if (Options.mov.isSelected()) {
-                    Point pressedPoint = new Point(e.getX(), e.getY());
-                    for (int i=0; i<Window.getFigures().size(); i++){
-                        if (getDistance(pressedPoint, Window.getFigures().get(i).getTheCenter()) <= 2){
-                            isMovedRightNow = true;
-                            movingFigure = i;
-                            Window.getFigures().get(i).setPenColor(Color.gray);
-                            repaint();
-                            break;
-                        }
-                    }
+
                 }
             }
 
-            private double getDistance(Point p1, Point p2){
-                return Math.sqrt((p1.x-p2.x)*(p1.x-p2.x) + (p1.y-p2.y)*(p1.y-p2.y));
-            }
 
             @Override
             public void mouseReleased(MouseEvent e) {
@@ -178,21 +171,7 @@ public class Paint extends JLabel {
                 if (Options.dr.isSelected()) {
 
                 } else if (Options.mov.isSelected()) {
-                    if (isMovedRightNow){
-                        int x1 = Window.getFigures().get(movingFigure).getTheCenter().x;
-                        int y1 = Window.getFigures().get(movingFigure).getTheCenter().y;
-                        int x2 = e.getX();
-                        int y2 = e.getY();
-                        int x = x2-x1;
-                        int y = y2-y1;
-                        for (int i=0; i<Window.getFigures().get(movingFigure).getArrayOfPoints().size(); i++){
-                            Window.getFigures().get(movingFigure).getArrayOfPoints().get(i).x += x;
-                            Window.getFigures().get(movingFigure).getArrayOfPoints().get(i).y += y;
-                        }
-                        Window.getFigures().get(movingFigure).getTheCenter().x += x;
-                        Window.getFigures().get(movingFigure).getTheCenter().y += y;
-                        repaint();
-                    }
+
                 }
             }
 
@@ -209,7 +188,12 @@ public class Paint extends JLabel {
                         }
                     }
                     if (k > 3) {
-                        counter = 3;
+                        if (k == 10){
+                            counter = 2;
+                        }
+                        else {
+                            counter = 3;
+                        }
                     } else {
                         counter = 2;
                     }
