@@ -39,7 +39,7 @@ public class Polygon extends FlatFigure {
     @Override
     public void draw(Graphics2D g2d) {
         g2d.setColor(getPenColor());
-        g2d.setStroke(new BasicStroke(getWidth()));
+        g2d.setStroke(new BasicStroke(getPenWidth()));
         for (int i=0; i<arrayOfPoints.size() - 1; i++){
             //g2d.setStroke(new BasicStroke(getPenWidth()));
             g2d.drawLine(arrayOfPoints.get(i).x, arrayOfPoints.get(i).y, arrayOfPoints.get(i+1).x, arrayOfPoints.get(i+1).y);

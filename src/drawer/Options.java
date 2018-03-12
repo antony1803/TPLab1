@@ -63,12 +63,13 @@ public class Options extends JPanel {
         c.insets = new Insets(5, 10, 5, 0);
         c.gridx = 0;
         c.gridy = 0;
-        c.fill = GridBagConstraints.BOTH;
+        c.fill = GridBagConstraints.HORIZONTAL;
         c.weightx = 0.2;
         c.weighty = 0.5;
         add(dr, c);
         c.gridy = 1;
         add(mov, c);
+        c.fill = GridBagConstraints.BOTH;
         c.insets = new Insets(10, 5, 5, 10);
         c.weightx = 0.2;
         c.gridx = 1;
@@ -77,6 +78,7 @@ public class Options extends JPanel {
         c.insets = new Insets(5, 5, 10, 10);
         c.gridy = 1;
         add(fill, c);
+        c.fill = GridBagConstraints.HORIZONTAL;
         c.insets = new Insets(10, 5, 5, 10);
         c.weightx = 0.6;
         c.gridx = 2;
@@ -94,7 +96,7 @@ public class Options extends JPanel {
         } );
         fill.setBackground(Color.white);
         fill.addActionListener(e -> {
-            fill.setBackground(JColorChooser.showDialog(null, "choose pen color", Color.white));
+            fill.setBackground(JColorChooser.showDialog(null, "choose fill color", Color.white));
         });
         clear.addActionListener(e-> {
             Window.getFigures().clear();
