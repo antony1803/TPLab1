@@ -15,6 +15,7 @@ public class Segment extends Figure {
 
     public Segment(Point p1, Point p2) {
         setPenColor(Options.getPen().getBackground());
+        setPenWidth(Options.getPenWidth());
         setTheCenter(new Point((p1.x + p2.x) / 2, (p1.y + p2.y) / 2));
         startPoint = p1;
         finishPoint = p2;
@@ -22,7 +23,7 @@ public class Segment extends Figure {
 
     @Override
     public void draw(Graphics2D g2d) {
-        //g2d.setStroke(new BasicStroke(getPenWidth()));
+        g2d.setStroke(new BasicStroke(getPenWidth()));
         g2d.setColor(getPenColor());
         g2d.drawLine(startPoint.x, startPoint.y, finishPoint.x, finishPoint.y);
         g2d.setColor(Color.black);

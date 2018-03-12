@@ -18,6 +18,7 @@ public class Polygon extends FlatFigure {
     public Polygon(){
         setPenColor(Options.getPen().getBackground());
         setFillColor(Options.getFill().getBackground());
+        setPenWidth(Options.getPenWidth());
     }
 
     public  ArrayList<Point> getArrayOfPoints() {

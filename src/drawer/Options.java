@@ -33,6 +33,14 @@ public class Options extends JPanel {
 
     static private JButton pen = new JButton();
     static private JButton fill = new JButton();
+
+    static final private Integer[] widths = {1, 2, 3, 4, 5};
+
+    public static int getPenWidth() {
+        return widths[width.getSelectedIndex()];
+    }
+
+    static private JComboBox<Integer> width;
     private JButton clear = new JButton("Clear");
     public Options(){
         super();
@@ -40,8 +48,8 @@ public class Options extends JPanel {
         whatToDo.add(dr);
         whatToDo.add(mov);
         dr.setSelected(true);
-        addComponents();
         setButtons();
+        addComponents();
         //Window.getFigures().add(new Diamond(new Point(0, 0), new Point(8,0), new Point(7,1)));
         //System.out.println(new Rectangle(new Point(50, 50), new Point(100, 100)).getNumberOfClicks());
         //System.out.println(new Diamond(new Point(50, 50), new Point(200, 200), new Point(150, 200)).getNumberOfClicks());
@@ -74,6 +82,9 @@ public class Options extends JPanel {
         c.gridx = 2;
         c.gridy = 0;
         add(clear, c);
+        c.gridy = 1;
+        c.insets = new Insets(5, 5, 10, 10);
+        add(width, c);
     }
 
     public void setButtons(){
@@ -89,6 +100,7 @@ public class Options extends JPanel {
             Window.getFigures().clear();
             repaint();
         });
+        width = new JComboBox<>(widths);
     }
 
 }
