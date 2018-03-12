@@ -5,7 +5,8 @@ import java.awt.*;
 public class Ray extends Segment {
 
     public Ray(Point p1, Point p2) {
-        super(p1, p2);
+        setTheCenter(p1);
+        finishPoint = p2;
     }
 
     @Override

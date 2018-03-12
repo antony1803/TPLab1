@@ -6,9 +6,7 @@ import java.awt.*;
 
 public abstract class FlatFigure extends Figure {
 
-    public FlatFigure() {
-
-    }
+    public FlatFigure() {}
 
     private Color fillColor;
 

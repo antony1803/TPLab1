@@ -8,6 +8,7 @@ public class IsoscelesTriangle extends Polygon {
 
     public IsoscelesTriangle(Point p1, Point p2, Point p3) {
         super(p1, p2, p3);
+        setTheCenter(p2);
     }
 
     @Override

@@ -19,8 +19,8 @@ public class Window extends JFrame{
 
     static private LinkedList<Figure> figures = new LinkedList<>();
     private Tools tools = new Tools();
-    private Paint paintLabel = new Paint();
     private Options options = new Options();
+    private Paint paintLabel = new Paint();
     public Window(){
         setWindow();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
