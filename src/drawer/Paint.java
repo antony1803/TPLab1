@@ -27,6 +27,9 @@ public class Paint extends JLabel {
     static int counter = -1;
     int k = -1;
     static ArrayList<Point> points = new ArrayList<>();
+    int ourFigure;
+    boolean isMovingRightNow = false;
+    int N;
 
     public Paint() {
         super();
@@ -103,7 +106,13 @@ public class Paint extends JLabel {
                                 break;
                             case 10:
                                 String temp = JOptionPane.showInputDialog(null, "Введите количество углов:");
-                                Window.getFigures().add(new RegularNPolygon(p1,p2,Math.max(Integer.parseInt(temp), 3)));
+                                if ("".equals(temp)){
+                                    N = 3;
+                                }
+                                else{
+                                    N = Math.max(3, Integer.parseInt(temp));
+                                }
+                                Window.getFigures().add(new RegularNPolygon(p1,p2,N));
                                 break;
                             case 11:
                                 a12 = p1.x - p2.x;
@@ -160,10 +169,20 @@ public class Paint extends JLabel {
                         }
                     }
                 } else if (Options.mov.isSelected()) {
-
+                    Point p = new Point(e.getX(), e.getY());
+                    for (int i = 0; i<Window.getFigures().size(); i++){
+                        if (getDistance(p, Window.getFigures().get(i).getTheCenter()) <= 4){
+                            ourFigure = i;
+                            isMovingRightNow = true;
+                            break;
+                        }
+                    }
                 }
             }
 
+            private double getDistance(Point p1, Point p2){
+                return Math.sqrt((p1.x-p2.x)*(p1.x-p2.x) + (p1.y-p2.y)*(p1.y-p2.y));
+            }
 
             @Override
             public void mouseReleased(MouseEvent e) {
@@ -171,6 +190,20 @@ public class Paint extends JLabel {
                 if (Options.dr.isSelected()) {
 
                 } else if (Options.mov.isSelected()) {
+                    if (isMovingRightNow){
+                        Point newCenter = new Point(e.getX(), e.getY());
+                        Point oldCenter = Window.getFigures().get(ourFigure).getTheCenter();
+                        int dx = newCenter.x - oldCenter.x;
+                        int dy = newCenter.y - oldCenter.y;
+                        for (int i=0; i<Window.getFigures().get(ourFigure).getArrayOfPoints().size() - 1; i++){
+                            Window.getFigures().get(ourFigure).getArrayOfPoints().get(i).x += dx;
+                            Window.getFigures().get(ourFigure).getArrayOfPoints().get(i).y += dy;
+                        }
+                        Window.getFigures().get(ourFigure).setTheCenter(newCenter);
+                        ourFigure = -1;
+                        isMovingRightNow = false;
+                        repaint();
+                    }
 
                 }
             }
@@ -220,10 +253,6 @@ public class Paint extends JLabel {
             }
 
         });
-
-    }
-
-    static public void setDraw() {
 
     }
 

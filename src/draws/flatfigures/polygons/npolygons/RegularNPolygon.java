@@ -4,7 +4,6 @@ import draws.flatfigures.polygons.Polygon;
 
 import java.awt.*;
 import java.util.ArrayList;
-//import java.util.List;
 
 public class RegularNPolygon extends Polygon {
 
@@ -15,7 +14,6 @@ public class RegularNPolygon extends Polygon {
     }
 
     public RegularNPolygon(Point center, Point p1, int n) {
-//System.out.println(RegularNPolygon.getPolygonPoints(center, p1, n)+"hi");
         super(RegularNPolygon.getPolygonPoints(center, p1, n));
         setTheCenter(center);
         N = n;
@@ -38,7 +36,6 @@ public class RegularNPolygon extends Polygon {
                     theCenter.y - (int) (Math.sin(z / 180 * Math.PI) * radius)));
             z = z + angle;
         }
-        System.out.println(points);
         return points;
     }
 
