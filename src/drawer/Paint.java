@@ -26,8 +26,9 @@ public class Paint extends JLabel {
 
     static int counter = -1;
     int k = -1;
+    int movingFigure = -1;
     static ArrayList<Point> points = new ArrayList<>();
-
+    private boolean isMovedRightNow = false;
     public Paint() {
         super();
         Options.getClear().addActionListener(e-> {
@@ -154,10 +155,22 @@ public class Paint extends JLabel {
                         }
                     }
                 } else if (Options.mov.isSelected()) {
-
+                    Point pressedPoint = new Point(e.getX(), e.getY());
+                    for (int i=0; i<Window.getFigures().size(); i++){
+                        if (getDistance(pressedPoint, Window.getFigures().get(i).getTheCenter()) <= 2){
+                            isMovedRightNow = true;
+                            movingFigure = i;
+                            Window.getFigures().get(i).setPenColor(Color.gray);
+                            repaint();
+                            break;
+                        }
+                    }
                 }
             }
 
+            private double getDistance(Point p1, Point p2){
+                return Math.sqrt((p1.x-p2.x)*(p1.x-p2.x) + (p1.y-p2.y)*(p1.y-p2.y));
+            }
 
             @Override
             public void mouseReleased(MouseEvent e) {
@@ -165,7 +178,21 @@ public class Paint extends JLabel {
                 if (Options.dr.isSelected()) {
 
                 } else if (Options.mov.isSelected()) {
-
+                    if (isMovedRightNow){
+                        int x1 = Window.getFigures().get(movingFigure).getTheCenter().x;
+                        int y1 = Window.getFigures().get(movingFigure).getTheCenter().y;
+                        int x2 = e.getX();
+                        int y2 = e.getY();
+                        int x = x2-x1;
+                        int y = y2-y1;
+                        for (int i=0; i<Window.getFigures().get(movingFigure).getArrayOfPoints().size(); i++){
+                            Window.getFigures().get(movingFigure).getArrayOfPoints().get(i).x += x;
+                            Window.getFigures().get(movingFigure).getArrayOfPoints().get(i).y += y;
+                        }
+                        Window.getFigures().get(movingFigure).getTheCenter().x += x;
+                        Window.getFigures().get(movingFigure).getTheCenter().y += y;
+                        repaint();
+                    }
                 }
             }
 

@@ -1,9 +1,16 @@
 package draws;
 
 import java.awt.*;
+import java.util.ArrayList;
 
 public abstract class Figure extends drawer.Paint{
 
+
+    public ArrayList<Point> getArrayOfPoints() {
+        return arrayOfPoints;
+    }
+
+    protected ArrayList<Point> arrayOfPoints = new ArrayList<>();
     public Figure() {
     }
 

@@ -21,12 +21,6 @@ public class Polygon extends FlatFigure {
         setPenWidth(Options.getPenWidth());
     }
 
-    public  ArrayList<Point> getArrayOfPoints() {
-        return arrayOfPoints;
-    }
-
-    private ArrayList<Point> arrayOfPoints;
-
     public Polygon(Point p1, Point p2, Point... p) {
         this();
         arrayOfPoints = new ArrayList(Arrays.asList(p));
