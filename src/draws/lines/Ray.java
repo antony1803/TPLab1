@@ -1,20 +1,22 @@
 package draws.lines;
 
+import drawer.Options;
+import draws.Figure;
+
 import java.awt.*;
 
 public class Ray extends Segment {
 
     public Ray(Point p1, Point p2) {
+        super(p1, p2);
         setTheCenter(p1);
         finishPoint = p2;
     }
 
     @Override
     public void draw(Graphics2D g2d) {
-        g2d.drawOval(getTheCenter().x-3, getTheCenter().y-3, 6, 6);
-        g2d.setColor(Color.red);
-        g2d.fillOval(getTheCenter().x-3, getTheCenter().y-3, 6, 6);
-        g2d.setColor(Color.black);
+        g2d.setColor(getPenColor());
+        g2d.setStroke(new BasicStroke(getPenWidth()));
         int x1 = getTheCenter().x;
         int y1 = getTheCenter().y;
         int x2 = finishPoint.x;
@@ -75,7 +77,11 @@ public class Ray extends Segment {
                 }
             }
         }
-
+        g2d.setStroke(new BasicStroke(1));
+        g2d.setColor(Color.red);
+        g2d.fillOval(getTheCenter().x-3, getTheCenter().y-3, 6, 6);
+        g2d.setColor(Color.black);
+        g2d.drawOval(getTheCenter().x-3, getTheCenter().y-3, 6, 6);
     }
 
     @Override

@@ -44,7 +44,7 @@ public class Paint extends JLabel {
                         Point p1 = points.get(0);
                         Point p2 = points.get(1);
                         Point p3 = new Point();
-                        double a12, a21, a23, a32, b12, b21, b23, b32;
+                        double a12, a21, a23, a32, b12, b21, b23, b32, x1, y1;
                         if (k > 3) {
                             p3 = points.get(2);
                         }
@@ -65,7 +65,18 @@ public class Paint extends JLabel {
                                 Window.getFigures().add(new Parallelogram(p1, p2, p3));
                                 break;
                             case 5:
-                                Window.getFigures().add(new Rectangle(p1, p2, p3));
+                                b21 = p2.y-p1.y;
+                                a21 = p2.x-p1.x;
+                                if(p1.x!=p2.x){
+                                    x1=-p3.y*b21/a21+p2.y*b21/a21+p2.x;
+                                    y1=p3.y;
+                                }
+                                else{
+                                    y1=-p3.x*a21/b21+p2.y*a21/b21+p2.y;
+                                    x1=p3.y;
+                                }
+
+                                Window.getFigures().add(new Rectangle(p1, p2, new Point((int)Math.round(x1), (int)Math.round(y1))));
                                 break;
                             case 6:
                                 a12 = p1.x - p2.x;
@@ -93,26 +104,21 @@ public class Paint extends JLabel {
                                 a32 = p3.x - p2.x;
                                 b12 = p1.y - p2.y;
                                 b32 = p3.y - p2.y;
-                                double x1 = a32 * Math.sqrt((a12 * a12 + b12 * b12) / (a32 * a32 + b32 * b32)) + (double) p2.x;
-                                double y1 = b32 * Math.sqrt((a12 * a12 + b12 * b12) / (a32 * a32 + b32 * b32)) + (double) p2.y;
+                                x1 = a32 * Math.sqrt((a12 * a12 + b12 * b12) / (a32 * a32 + b32 * b32)) + (double) p2.x;
+                                y1 = b32 * Math.sqrt((a12 * a12 + b12 * b12) / (a32 * a32 + b32 * b32)) + (double) p2.y;
                                 Window.getFigures().add(new IsoscelesTriangle(p1, p2, new Point((int) Math.round(x1), (int) Math.round(y1))));
                                 break;
                             case 12:
-                                if ((p3.y - p2.y) * (p2.y - p1.y) + (p2.x - p1.x) * (p3.x - p2.x) == 0) {
-                                    Point temp = p2;
-                                    p2.x = p3.x;
-                                    p2.y = p3.y;
-                                    p3.x = temp.x;
-                                    p3.y = temp.y;
-                                }
-                                a32 = p3.x - p2.x;
                                 b21 = p2.y - p1.y;
-                                b32 = p3.y - p2.y;
                                 a21 = p2.x - p1.x;
-                                double x3 = (p1.x * a32 * a21 + p2.x * b32 * b21 - p2.y * b21 * a32 + p1.y * b21 * a32) / ((p3.y - p2.y) * (p2.y - p1.y) + (p2.x - p1.x) * (p3.x - p2.x));
-                                double y3 = (x3 * b32 / a32 - p2.x * b32) / a32 + p2.y;
-                                Point result = new Point((int) Math.round(x3), (int) Math.round(y3));
-                                Window.getFigures().add(new RectangularTriangle(p1, p2, result));
+                                if (p1.x != p2.x) {
+                                    x1 = -p3.y * b21 / a21 + p2.y * b21 / a21 + p2.x;
+                                    y1 = p3.y;
+                                } else {
+                                    y1 = -p3.x * a21 / b21 + p2.y * a21 / b21 + p2.y;
+                                    x1 = p3.y;
+                                }
+                                Window.getFigures().add(new RectangularTriangle(p1, p2, new Point((int) Math.round(x1), (int) Math.round(y1))));
                                 break;
                             case 13:
                                 double x4 = (double) (p1.x + p2.x) / 2.0;
@@ -128,7 +134,7 @@ public class Paint extends JLabel {
                                 b32 = y2 - p2.y;
                                 x1 = a32 * Math.sqrt((a12 * a12 + b12 * b12) / (a32 * a32 + b32 * b32)) + (double) p2.x;
                                 y1 = b32 * Math.sqrt((a12 * a12 + b12 * b12) / (a32 * a32 + b32 * b32)) + (double) p2.y;
-                                Window.getFigures().add(new IsoscelesRectangularTriangle(p1, p2, new Point((int) Math.round(x1), (int) Math.round(y1))));
+                                Window.getFigures().add(new IsoscelesRectangularTriangle(p1, p2, new Point(p1.x + (int) Math.round(x1) - p2.x, p1.y + (int) Math.round(y1) - p2.y)));
                                 //new IsoscelesRectangularTriangle(p1, p2, p3);
                                 break;
                             default:
@@ -213,6 +219,7 @@ public class Paint extends JLabel {
         for (int i = 0; i < figures.size(); i++) {
             figures.get(i).draw(g2d);
         }
+
     }
 
 }

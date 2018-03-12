@@ -9,9 +9,9 @@ public abstract class Figure extends drawer.Paint{
 
     private Point theCenter;
 
-    private Color penColor;
+    private Color penColor = Color.black;
 
-    private int penWidth;
+    private int penWidth = 1;
 
     public abstract void draw(Graphics2D g2d);
 
@@ -43,7 +43,8 @@ public abstract class Figure extends drawer.Paint{
         return penWidth;
     }
 
-    public void setPenWidth(int penWidth) {
+    public  void setPenWidth(int penWidth) {
         this.penWidth = penWidth;
     }
+
 }

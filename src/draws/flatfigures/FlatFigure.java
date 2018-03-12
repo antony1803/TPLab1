@@ -6,9 +6,9 @@ import java.awt.*;
 
 public abstract class FlatFigure extends Figure {
 
-    public FlatFigure() {}
+    public FlatFigure() {    }
 
-    private Color fillColor;
+    private Color fillColor = Color.white;
 
     private Point leftCornerPoint;
 
@@ -30,8 +30,8 @@ public abstract class FlatFigure extends Figure {
         return fillColor;
     }
 
-    public void setFillColor(Color fillColor) {
-        this.fillColor = fillColor;
+    public void setFillColor(Color _fillColor) {
+        fillColor = _fillColor;
     }
 
     public Point getLeftCornerPoint() {

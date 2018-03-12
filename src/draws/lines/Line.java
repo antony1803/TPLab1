@@ -1,5 +1,6 @@
 package draws.lines;
 
+import drawer.Options;
 import draws.Figure;
 
 import java.awt.*;
@@ -14,14 +15,16 @@ public class Line extends Ray {
     @Override
     public void draw(Graphics2D g2d) {
         super.draw(g2d);
+        g2d.setColor(getPenColor());
+        g2d.setStroke(new BasicStroke(getPenWidth()));
         int x1 = getTheCenter().x;
         int y1 = getTheCenter().y;
         int x2 = finishPoint.x;
         int y2 = finishPoint.y;
         int endX = 687;
         int endY = 635;
-        int xResult = 0;
-        int yResult = 0;
+        int xResult;
+        int yResult;
         if (x1 == x2){
             g2d.drawLine(x1, 0, x1, endY);
         }
@@ -74,6 +77,11 @@ public class Line extends Ray {
                 }
             }
         }
+        g2d.setStroke(new BasicStroke(1));
+        g2d.setColor(Color.red);
+        g2d.fillOval(getTheCenter().x-3, getTheCenter().y-3, 6, 6);
+        g2d.setColor(Color.black);
+        g2d.drawOval(getTheCenter().x-3, getTheCenter().y-3, 6, 6);
     }
 
     @Override

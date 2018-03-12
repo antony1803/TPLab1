@@ -7,7 +7,6 @@ import java.util.ArrayList;
 public class Tools extends JPanel {
 
 
-    static JButton clear = new JButton("Clear");
     static ArrayList<JRadioButton> buttons = new ArrayList<>();
 
     public Tools(){
@@ -39,9 +38,6 @@ public class Tools extends JPanel {
             bg.add(buttons.get(i));
             add(buttons.get(i));
         }
-        JPanel temp = new JPanel();
-        temp.add(clear, BorderLayout.PAGE_END);
-        add(temp);
     }
 
     public void setClicks(){
