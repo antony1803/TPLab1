@@ -66,8 +66,14 @@ public class Paint extends JLabel {
                             case 2:
                                 Window.getFigures().add(new Segment(p1, p2));
                                 break;
-                            case 3:
-                                new Star(p1, p2);
+                             case 3:
+                                String temp = JOptionPane.showInputDialog(null, "Введите количество углов:");
+                                if ("".equals(temp)) {
+                                    N = 3;
+                                } else {
+                                    N = Math.max(3, Integer.parseInt(temp));
+                                }
+                                Window.getFigures().add(new Star(p1, p2, N));
                                 break;
                             case 4:
                                 String temp = JOptionPane.showInputDialog(null, "Введите количество углов:");
