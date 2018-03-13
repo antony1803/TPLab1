@@ -33,7 +33,7 @@ public class Paint extends JLabel {
 
     public Paint() {
         super();
-        Options.getClear().addActionListener(e-> {
+        Options.getClear().addActionListener(e -> {
             Window.getFigures().clear();
             Paint.points.clear();
             repaint();
@@ -53,7 +53,7 @@ public class Paint extends JLabel {
                         Point p2 = points.get(1);
                         Point p3 = new Point();
                         double a12, a21, a23, a32, b12, b21, b23, b32, x1, y1;
-                        if (k > 3 && k != 10) {
+                        if (Tools.buttons.get(k).getCountOfClicks() > 2) {
                             p3 = points.get(2);
                         }
                         switch (k) {
@@ -70,21 +70,26 @@ public class Paint extends JLabel {
                                 new Star(p1, p2);
                                 break;
                             case 4:
-                                Window.getFigures().add(new Parallelogram(p1, p2, p3));
+                                String temp = JOptionPane.showInputDialog(null, "Введите количество углов:");
+                                if ("".equals(temp)) {
+                                    N = 3;
+                                } else {
+                                    N = Math.max(3, Integer.parseInt(temp));
+                                }
+                                Window.getFigures().add(new RegularNPolygon(p1, p2, N));
                                 break;
                             case 5:
-                                b21 = p2.y-p1.y;
-                                a21 = p2.x-p1.x;
-                                if(p1.x!=p2.x){
-                                    x1=-p3.y*b21/a21+p2.y*b21/a21+p2.x;
-                                    y1=p3.y;
-                                }
-                                else{
-                                    y1=-p3.x*a21/b21+p2.y*a21/b21+p2.y;
-                                    x1=p3.y;
+                                b21 = p2.y - p1.y;
+                                a21 = p2.x - p1.x;
+                                if (p1.x != p2.x) {
+                                    x1 = -p3.y * b21 / a21 + p2.y * b21 / a21 + p2.x;
+                                    y1 = p3.y;
+                                } else {
+                                    y1 = -p3.x * a21 / b21 + p2.y * a21 / b21 + p2.y;
+                                    x1 = p3.y;
                                 }
 
-                                Window.getFigures().add(new Rectangle(p1, p2, new Point((int)Math.round(x1), (int)Math.round(y1))));
+                                Window.getFigures().add(new Rectangle(p1, p2, new Point((int) Math.round(x1), (int) Math.round(y1))));
                                 break;
                             case 6:
                                 a12 = p1.x - p2.x;
@@ -105,14 +110,7 @@ public class Paint extends JLabel {
                                 new Polygon();
                                 break;
                             case 10:
-                                String temp = JOptionPane.showInputDialog(null, "Введите количество углов:");
-                                if ("".equals(temp)){
-                                    N = 3;
-                                }
-                                else{
-                                    N = Math.max(3, Integer.parseInt(temp));
-                                }
-                                Window.getFigures().add(new RegularNPolygon(p1,p2,N));
+                                Window.getFigures().add(new Parallelogram(p1, p2, p3));
                                 break;
                             case 11:
                                 a12 = p1.x - p2.x;
@@ -150,28 +148,18 @@ public class Paint extends JLabel {
                                 x1 = a32 * Math.sqrt((a12 * a12 + b12 * b12) / (a32 * a32 + b32 * b32)) + (double) p2.x;
                                 y1 = b32 * Math.sqrt((a12 * a12 + b12 * b12) / (a32 * a32 + b32 * b32)) + (double) p2.y;
                                 Window.getFigures().add(new IsoscelesRectangularTriangle(p1, p2, new Point(p1.x + (int) Math.round(x1) - p2.x, p1.y + (int) Math.round(y1) - p2.y)));
-                                //new IsoscelesRectangularTriangle(p1, p2, p3);
                                 break;
                             default:
                                 break;
                         }
                         points.clear();
                         repaint();
-                        if (k > 3) {
-                            if (k == 10){
-                                counter = 2;
-                            }
-                            else{
-                                counter = 3;
-                            }
-                        } else {
-                            counter = 2;
-                        }
+                        counter = Tools.buttons.get(k).getCountOfClicks();
                     }
                 } else if (Options.mov.isSelected()) {
                     Point p = new Point(e.getX(), e.getY());
-                    for (int i = 0; i<Window.getFigures().size(); i++){
-                        if (getDistance(p, Window.getFigures().get(i).getTheCenter()) <= 4){
+                    for (int i = 0; i < Window.getFigures().size(); i++) {
+                        if (getDistance(p, Window.getFigures().get(i).getTheCenter()) <= 4) {
                             ourFigure = i;
                             isMovingRightNow = true;
                             break;
@@ -180,8 +168,8 @@ public class Paint extends JLabel {
                 }
             }
 
-            private double getDistance(Point p1, Point p2){
-                return Math.sqrt((p1.x-p2.x)*(p1.x-p2.x) + (p1.y-p2.y)*(p1.y-p2.y));
+            private double getDistance(Point p1, Point p2) {
+                return Math.sqrt((p1.x - p2.x) * (p1.x - p2.x) + (p1.y - p2.y) * (p1.y - p2.y));
             }
 
             @Override
@@ -190,12 +178,12 @@ public class Paint extends JLabel {
                 if (Options.dr.isSelected()) {
 
                 } else if (Options.mov.isSelected()) {
-                    if (isMovingRightNow){
+                    if (isMovingRightNow) {
                         Point newCenter = new Point(e.getX(), e.getY());
                         Point oldCenter = Window.getFigures().get(ourFigure).getTheCenter();
                         int dx = newCenter.x - oldCenter.x;
                         int dy = newCenter.y - oldCenter.y;
-                        for (int i=0; i<Window.getFigures().get(ourFigure).getArrayOfPoints().size() - 1; i++){
+                        for (int i = 0; i < Window.getFigures().get(ourFigure).getArrayOfPoints().size() - 1; i++) {
                             Window.getFigures().get(ourFigure).getArrayOfPoints().get(i).x += dx;
                             Window.getFigures().get(ourFigure).getArrayOfPoints().get(i).y += dy;
                         }
@@ -215,21 +203,12 @@ public class Paint extends JLabel {
                     setCursor(Cursor.getPredefinedCursor(1));
                     k = -1;
                     for (int i = 0; i < Tools.buttons.size(); i++) {
-                        if (Tools.buttons.get(i).isSelected()) {
+                        if (Tools.buttons.get(i).getButton().isSelected()) {
                             k = i;
                             break;
                         }
                     }
-                    if (k > 3) {
-                        if (k == 10){
-                            counter = 2;
-                        }
-                        else {
-                            counter = 3;
-                        }
-                    } else {
-                        counter = 2;
-                    }
+                    counter = Tools.buttons.get(k).getCountOfClicks();
                 } else if (Options.mov.isSelected()) {
                     setCursor(Cursor.getDefaultCursor());
                 }
@@ -240,16 +219,12 @@ public class Paint extends JLabel {
                 super.mouseExited(e);
                 k = -1;
                 for (int i = 0; i < Tools.buttons.size(); i++) {
-                    if (Tools.buttons.get(i).isSelected()) {
+                    if (Tools.buttons.get(i).getButton().isSelected()) {
                         k = i;
                         break;
                     }
                 }
-                if (k > 3) {
-                    counter = 3;
-                } else {
-                    counter = 2;
-                }
+                counter = Tools.buttons.get(k).getCountOfClicks();
             }
 
         });

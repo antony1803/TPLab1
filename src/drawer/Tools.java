@@ -7,24 +7,24 @@ import java.util.ArrayList;
 public class Tools extends JPanel {
 
 
-    static ArrayList<JRadioButton> buttons = new ArrayList<>();
+    static ArrayList<JRadioButtons> buttons = new ArrayList<>();
 
     public Tools(){
         super();
-        buttons.add(new JRadioButton("Line"));
-        buttons.add(new JRadioButton("Ray"));
-        buttons.add(new JRadioButton("Segment"));
-        buttons.add(new JRadioButton("Star"));
-        buttons.add(new JRadioButton("Parallelogramm"));
-        buttons.add(new JRadioButton("Rectangle"));
-        buttons.add(new JRadioButton("Diamond"));
-        buttons.add(new JRadioButton("Ellipse"));
-        buttons.add(new JRadioButton("Circle"));
-        buttons.add(new JRadioButton("Polygon"));
-        buttons.add(new JRadioButton("Regular Polygon"));
-        buttons.add(new JRadioButton("Isosceless Triangle"));
-        buttons.add(new JRadioButton("Rectangular Triangle"));
-        buttons.add(new JRadioButton("Isosceless Rectangular Triangle"));
+        buttons.add(new JRadioButtons("Line", 2));
+        buttons.add(new JRadioButtons("Ray", 2));
+        buttons.add(new JRadioButtons("Segment", 2));
+        buttons.add(new JRadioButtons("Star", 2));
+        buttons.add(new JRadioButtons("Regular Polygon", 2));
+        buttons.add(new JRadioButtons("Rectangle", 3));
+        buttons.add(new JRadioButtons("Diamond", 3));
+        buttons.add(new JRadioButtons("Ellipse", 3));
+        buttons.add(new JRadioButtons("Circle", 3));
+        buttons.add(new JRadioButtons("Polygon", 3));
+        buttons.add(new JRadioButtons("Parallelogramm", 3));
+        buttons.add(new JRadioButtons("Isosceless Triangle", 3));
+        buttons.add(new JRadioButtons("Rectangular Triangle", 3));
+        buttons.add(new JRadioButtons("Isosceless Rectangular Triangle", 3));
         addComponents();
         setClicks();
         setBorder(BorderFactory.createLineBorder(Color.BLUE));
@@ -33,17 +33,17 @@ public class Tools extends JPanel {
     public void addComponents(){
         setLayout(new GridLayout(0, 1));
         ButtonGroup bg = new ButtonGroup();
-        buttons.get(0).setSelected(true);
+        buttons.get(0).getButton().setSelected(true);
         for (int i =0; i < buttons.size(); i++){
-            bg.add(buttons.get(i));
-            add(buttons.get(i));
+            bg.add(buttons.get(i).getButton());
+            add(buttons.get(i).getButton());
         }
     }
 
     public void setClicks(){
         ClickerListener listener = new ClickerListener();
         for(int i=0; i<buttons.size(); i++){
-            buttons.get(i).addActionListener(listener);
+            buttons.get(i).getButton().addActionListener(listener);
         }
     }
 }

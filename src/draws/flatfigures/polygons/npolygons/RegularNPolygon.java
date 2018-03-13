@@ -3,6 +3,7 @@ package draws.flatfigures.polygons.npolygons;
 import draws.flatfigures.polygons.Polygon;
 
 import java.awt.*;
+import java.awt.geom.Ellipse2D;
 import java.util.ArrayList;
 
 public class RegularNPolygon extends Polygon {
@@ -43,6 +44,9 @@ public class RegularNPolygon extends Polygon {
 
     public void draw(Graphics2D g2d) {
         super.draw(g2d);
+        g2d.rotate(Math.toDegrees(30));
+        g2d.drawOval(50, 50, 100, 150);
+        g2d.rotate(Math.toDegrees(-30));
     }
 
     @Override
